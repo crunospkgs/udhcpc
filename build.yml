@@ -1,0 +1,17 @@
+image: udhcpc
+org: crunospkgs
+
+network: true
+disable-content-trust: true
+
+config:
+  tmpfs:
+    - /run
+  binds:
+    - /etc/resolv.conf:/etc/resolv.conf
+  capabilities:
+    - CAP_SYS_ADMIN
+    - CAP_NET_ADMIN
+    - CAP_NET_RAW
+  readonly: true
+  net: host

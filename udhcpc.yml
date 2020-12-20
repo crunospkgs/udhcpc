@@ -1,0 +1,3 @@
+services:
+  - name: udhcpc
+    image: crunospkgs/udhcpc:latest
